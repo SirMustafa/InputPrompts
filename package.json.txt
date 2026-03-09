@@ -1,0 +1,8 @@
+"name": "com.must.inputprompts",
+  "version": "1.0.0",
+  "displayName": "Input Prompts",
+  "description": "TMP input prompt package for keyboard, Xbox and PlayStation.",
+  "unity": "2021.3",
+  "author": {
+    "name": "Must"
+  }
