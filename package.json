@@ -4,6 +4,10 @@
   "displayName": "Input Prompts",
   "description": "TMP input prompt package for keyboard, Xbox and PlayStation.",
   "unity": "2021.3",
+  "dependencies": {
+    "com.unity.inputsystem": "1.7.0",
+    "com.unity.textmeshpro": "3.0.6"
+  },
   "author": {
     "name": "Must"
   }
