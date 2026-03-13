@@ -1,6 +1,9 @@
 {
-  "name": "InputPrompts",
-  "references": [],
+  "name": "SirMust.InputPrompts",
+  "references": [
+    "Unity.TextMeshPro",
+    "Unity.InputSystem"
+  ],
   "includePlatforms": [],
   "excludePlatforms": [],
   "allowUnsafeCode": false,
