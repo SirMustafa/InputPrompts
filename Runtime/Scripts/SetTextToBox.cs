@@ -36,6 +36,7 @@ public class SetTextToBox : MonoBehaviour
     {
         InputSystem.onDeviceChange += OnDeviceChanged;
         OnLastUsedDeviceChanged += Refresh;
+
         StartCoroutine(RefreshNextFrame());
     }
 
@@ -243,8 +244,10 @@ public class SetTextToBox : MonoBehaviour
 
             if (keyboardOnly)
             {
-                if (!BindingMatchesGroup(binding, "KeyboardMouse") && !PathLooksKeyboard(GetBindingPath(binding)))
+                if (!BindingMatchesGroup(binding, "Keyboard&Mouse") && !PathLooksKeyboard(GetBindingPath(binding)))
+                {
                     continue;
+                }
             }
             else
             {
@@ -289,17 +292,17 @@ public class SetTextToBox : MonoBehaviour
     {
         return device switch
         {
-            InputPromptDevice.KeyboardMouse => "KeyboardMouse",
+            InputPromptDevice.KeyboardMouse => "Keyboard&Mouse",
             InputPromptDevice.Xbox => "Gamepad",
             InputPromptDevice.PlayStation => "Gamepad",
-            _ => "KeyboardMouse"
+            _ => "Keyboard&Mouse"
         };
     }
 
     private static InputPromptDevice DetectGamepadType(Gamepad gamepad)
     {
 #if UNITY_PS5
-        return InputPromptDevice.PlayStation;
+    return InputPromptDevice.PlayStation;
 #else
         string name = gamepad.displayName;
 
